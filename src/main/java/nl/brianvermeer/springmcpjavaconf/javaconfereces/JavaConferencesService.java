@@ -21,16 +21,10 @@ public class JavaConferencesService {
 
     ObjectMapper mapper = new ObjectMapper();
 
-    public List<Event> getUpcomingConferences() throws IOException {
-        List<ConferenceJson> conferences = fetchJavaConferences();
-        return convertToEvents(conferences).stream().filter(event -> event.startDate().isAfter(LocalDateTime.now())).toList();
-    }
-
     public List<Event> getAllEvents() throws IOException {
         List<ConferenceJson> conferences = fetchJavaConferences();
         return convertToEvents(conferences);
     }
-
 
     private List<ConferenceJson> fetchJavaConferences() throws IOException {
         mapper.registerModule(new JavaTimeModule());
