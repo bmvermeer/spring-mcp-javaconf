@@ -11,7 +11,7 @@ A Java Spring Boot-based Model Context Protocol (MCP) server that provides tools
 
 ## Installation
 
-### Using [[JBang](https://www.jbang.dev/) (Recommended)
+### Using [JBang](https://www.jbang.dev/) (Recommended)
 
 Configure in your MCP client (e.g., Cursor, Claude Desktop):
 
